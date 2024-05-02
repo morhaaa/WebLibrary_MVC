@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebLibrary.Models
 {
@@ -9,6 +10,8 @@ namespace WebLibrary.Models
          public int Id { get; set; }
 
          [Required]
+         [DisplayName("Category Name")]// Nome da far vedere nella label
+         [MaxLength(30, ErrorMessage = "Max length of 30 characters")]
          public string Name { get; set; }
     }
 }
